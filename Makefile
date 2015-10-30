@@ -1,7 +1,9 @@
+image=codedo/minimal-java:dockerfile
+
 all: build
 
 build:
-	docker build -t codedo/minimal-java:dockerfile .
+	docker build -t $(image) .
 
 run:
-	docker run -it --rm codedo/minimal-java:dockerfile /bin/sh
+	docker run -it --rm $(image) /bin/sh
